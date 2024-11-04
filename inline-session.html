@@ -113,7 +113,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
       function initXR() {
 
-        arStartedNeu = false;
 
         xrButtonNew = new WebXRButton({
           onRequestSession: onRequestSession,
@@ -155,6 +154,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           // Set a flag on the session so we can differentiate it from the
           // inline session.
           session.isImmersive = true;
+          arStartedNeu = false;
           onSessionStarted(session);
         });
       }
